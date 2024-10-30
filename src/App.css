@@ -1,0 +1,171 @@
+/* src/App.css */
+
+/* Light Theme Variables */
+:root {
+  --background-color: #f0f8ff;
+  --text-color: #333;
+  --card-background-color: #ffffff;
+  --button-color: #4caf50;
+  --button-hover-color: #45a049;
+  --forecast-background-color: #e3f2fd;
+  --aqi-card-background-color: #ffefc1;
+  --input-border-color: #ccc;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --background-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --card-background-color: #333333;
+  --button-color: #ff8c00;
+  --button-hover-color: #ffa500;
+  --forecast-background-color: #2c2c2c;
+  --aqi-card-background-color: #4b4b4b;
+  --input-border-color: #666;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.weather-dashboard {
+  text-align: center;
+  background-color: var(--card-background-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.weather-dashboard h1 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.weather-dashboard h2 {
+  font-size: 1.2rem;
+  margin-top: 100px;
+  color: var(--text-color);
+}
+
+.weather-dashboard input {
+  padding: 0.5rem;
+  width: 80%;
+  margin-bottom: 1rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+}
+
+.weather-dashboard button {
+  padding: 0.5rem 1rem;
+  background-color: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.weather-dashboard button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+/* Container for side-by-side alignment of WeatherCard and AQICard */
+.info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.weather-card {
+  background-color: var(--forecast-background-color);
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  color: var(--text-color);
+}
+
+.aqi-card {
+  background-color: var(--aqi-card-background-color);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  min-height: 350px;
+  color: var(--text-color);
+}
+
+.forecast-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.weather-forecast {
+  background-color: var(--forecast-background-color);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+  color: var(--text-color);
+}
+
+/* Custom CSS for Footer and Icons */
+.footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white; /* Default color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a.github-icon:hover {
+  color:#091057; /* GitHub blue */
+}
+
+.social-icons a.linkedin-icon:hover {
+  color: #0e76a8; /* LinkedIn blue */
+}
+
+.social-icons a.twitter-icon:hover {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.social-icons a.gmail-icon:hover {
+  color: #D14836; /* Gmail red */
+}
